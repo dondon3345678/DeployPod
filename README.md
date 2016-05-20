@@ -1,9 +1,17 @@
 ## DeployPod
 Assigning Pods to Nodes
 
-## Code Example
+## Implementation
+使用Deploy物件來實作
 
-Deploy newDeploy(pod's json filename,node's index )
-newDeploy.createPod()  to create a pod and deploy it to specific node by nodeselector
+## Usage
+'#include "Deploy.h"'  並且把Deploy.cpp加到Makefile中
+
+## API
+* Constrctor : Deploy(pod的json檔名,欲指定的node的index)
+* Deploy.createPod() :create pod and deploy it.
+
+## Example
+參考main.cpp 
 
 

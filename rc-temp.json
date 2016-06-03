@@ -1,0 +1,32 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "ticket-test",
+    "labels": {
+      "name": "ticket-test"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "name": "ticket-test"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "name": "ticket-test"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "ticket-test",
+            "image": "jane801030/ticket-test"
+          }
+        ],
+        "restartPolicy": "Always"
+      }
+    }
+  }
+}

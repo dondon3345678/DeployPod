@@ -22,7 +22,20 @@
         "containers": [
           {
             "name": "ticket-test",
-            "image": "jane801030/ticket-test"
+            "image": "jane801030/ticket-test",
+            "ports": [
+            {
+               "containerPort": 8000,
+               "protocol": "TCP"
+            }
+          ],
+            "resource": {
+             "limits": {
+              "cpu": "1200m",
+              "memory": "512Mi"
+             }
+
+            }
           }
         ],
         "restartPolicy": "Always"
